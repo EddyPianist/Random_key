@@ -35,44 +35,45 @@
 </head>
 <body>
 
-  <h1>CRASH: Raw Audio Score-based Generative Modeling</h1>
+  <h1>Randomkey: A keyboard generater</h1>
   <h2>Fine-tuned vs Original Model Comparison</h2>
   <p><i>By Eddy</i></p>
 
   <div class="container">
     <p>
       Each audio sample below is generated using both the <strong>fine-tuned</strong> version of the model and the <strong>original</strong> one. 
-      This comparison helps highlight how conditioning and fine-tuning improve control and sound quality.
+      This comparison shows how conditioning and fine-tuning improve control and sound quality.
     </p>
 
     <!-- Audio sample template -->
     <div class="sample-block">
-      <p><strong>Prompt:</strong> piano, C4 | CFG = 7</p>
-      <p class="subheading">Fine-tuned</p>
-      <audio controls><source src="audio/01_piano_C4_cfg7_f.wav" type="audio/wav"></audio>
-      <p class="subheading">Original</p>
-      <audio controls><source src="audio/01_piano_C4_cfg7_o.wav" type="audio/wav"></audio>
+      <p><strong>Prompt Group:</strong> piano notes across octaves | CFG = 7</p>
+      <p>
+        These samples explore how well the model generalizes pitch across different notes.
+        The fine-tuned version shows a stronger understanding of octave positioning and timbral consistency compared to the original model.
+      </p>
+    
+      <p class="subheading">C6</p>
+      <audio controls><source src="audio/01_piano_C6_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/01_piano_C6_cfg7_o.wav" type="audio/wav"></audio>
+    
+      <p class="subheading">D6</p>
+      <audio controls><source src="audio/02_piano_D6_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_D6_cfg7_o.wav" type="audio/wav"></audio>
+    
+      <p class="subheading">E5</p>
+      <audio controls><source src="audio/03_piano_E5_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/03_piano_E5_cfg7_o.wav" type="audio/wav"></audio>
+    
+      <p class="subheading">F5</p>
+      <audio controls><source src="audio/04_piano_F5_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/04_piano_F5_cfg7_o.wav" type="audio/wav"></audio>
+    
+      <p class="subheading">G6</p>
+      <audio controls><source src="audio/05_piano_G6_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/05_piano_G6_cfg7_o.wav" type="audio/wav"></audio>
     </div>
-
-    <div class="sample-block">
-      <p><strong>Prompt:</strong> piano, C4 | CFG = 0.5 (3 variations)</p>
-      <p class="subheading">Fine-tuned</p>
-      <audio controls><source src="audio/02_piano_C4_cfg0.5_r1_f.wav" type="audio/wav"></audio>
-      <audio controls><source src="audio/02_piano_C4_cfg0.5_r2_f.wav" type="audio/wav"></audio>
-      <audio controls><source src="audio/02_piano_C4_cfg0.5_r3_f.wav" type="audio/wav"></audio>
-      <p class="subheading">Original</p>
-      <audio controls><source src="audio/02_piano_C4_cfg0.5_r1_o.wav" type="audio/wav"></audio>
-      <audio controls><source src="audio/02_piano_C4_cfg0.5_r2_o.wav" type="audio/wav"></audio>
-      <audio controls><source src="audio/02_piano_C4_cfg0.5_r3_o.wav" type="audio/wav"></audio>
-    </div>
-
-    <div class="sample-block">
-      <p><strong>Prompt:</strong> piano, low reverb, C4 | CFG = 7</p>
-      <p class="subheading">Fine-tuned</p>
-      <audio controls><source src="audio/03_piano_C4_low_reverb_cfg7_f.wav" type="audio/wav"></audio>
-      <p class="subheading">Original</p>
-      <audio controls><source src="audio/03_piano_C4_low_reverb_cfg7_o.wav" type="audio/wav"></audio>
-    </div>
+    
 
     <div class="sample-block">
       <p><strong>Prompt:</strong> violin, D5 | CFG = 7</p>
@@ -83,15 +84,29 @@
     </div>
 
     <div class="sample-block">
+      <p><strong>Prompt:</strong> piano, C4 | CFG = 0.5 (3 variations)</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r1_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r2_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r3_f.wav" type="audio/wav"></audio>
+      <p>The hyperparameter CFG scale can provide more randomness to the orignal sound. If you want to create something similar to piano but slightly different, just play with this parameters. </p>
+    </div>
+
+    <div class="sample-block">
       <p><strong>Prompt:</strong> violin, D5 | CFG = 0.3 (3 variations)</p>
       <p class="subheading">Fine-tuned</p>
       <audio controls><source src="audio/05_violin_D5_cfg0.3_r1_f.wav" type="audio/wav"></audio>
       <audio controls><source src="audio/05_violin_D5_cfg0.3_r2_f.wav" type="audio/wav"></audio>
       <audio controls><source src="audio/05_violin_D5_cfg0.3_r3_f.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p>One of the advantages of text-to-music model is that we can have more control over the generated audio, for example, we can have controls over reverb or try to add some effects like vibrato. </p>
+      <p><strong>Prompt:</strong> piano, low reverb, C4 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/03_piano_C4_low_reverb_cfg7_f.wav" type="audio/wav"></audio>
       <p class="subheading">Original</p>
-      <audio controls><source src="audio/05_violin_D5_cfg0.3_r1_o.wav" type="audio/wav"></audio>
-      <audio controls><source src="audio/05_violin_D5_cfg0.3_r2_o.wav" type="audio/wav"></audio>
-      <audio controls><source src="audio/05_violin_D5_cfg0.3_r3_o.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/03_piano_C4_low_reverb_cfg7_o.wav" type="audio/wav"></audio>
     </div>
 
     <div class="sample-block">
@@ -103,6 +118,7 @@
     </div>
 
     <div class="sample-block">
+      <p>The only limitation is your own imagination!</p>
       <p><strong>Prompt:</strong> bird call, G5 | CFG = 7</p>
       <p class="subheading">Fine-tuned</p>
       <audio controls><source src="audio/07_bird_call_G5_cfg7_f.wav" type="audio/wav"></audio>
