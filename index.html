@@ -47,32 +47,32 @@
 
     <!-- Audio sample template -->
     <div class="sample-block">
-      <p><strong>Prompt Group:</strong> piano notes across octaves | CFG = 7</p>
+      <p><strong>Prompt Set:</strong> piano notes across octaves | CFG = 7</p>
       <p>
-        These samples explore how well the model generalizes pitch across different notes.
-        The fine-tuned version shows a stronger understanding of octave positioning and timbral consistency compared to the original model.
+        The following samples compare outputs from the original model and the fine-tuned version, across a range of piano notes. 
+        This showcases how fine-tuning helps stabilize pitch control and improves consistency across different octaves.
       </p>
     
-      <p class="subheading">C6</p>
-      <audio controls><source src="audio/01_piano_C6_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original Model</p>
       <audio controls><source src="audio/01_piano_C6_cfg7_o.wav" type="audio/wav"></audio>
-    
-      <p class="subheading">D6</p>
-      <audio controls><source src="audio/02_piano_D6_cfg7_f.wav" type="audio/wav"></audio>
       <audio controls><source src="audio/02_piano_D6_cfg7_o.wav" type="audio/wav"></audio>
-    
-      <p class="subheading">E5</p>
-      <audio controls><source src="audio/03_piano_E5_cfg7_f.wav" type="audio/wav"></audio>
       <audio controls><source src="audio/03_piano_E5_cfg7_o.wav" type="audio/wav"></audio>
-    
-      <p class="subheading">F5</p>
-      <audio controls><source src="audio/04_piano_F5_cfg7_f.wav" type="audio/wav"></audio>
       <audio controls><source src="audio/04_piano_F5_cfg7_o.wav" type="audio/wav"></audio>
-    
-      <p class="subheading">G6</p>
-      <audio controls><source src="audio/05_piano_G6_cfg7_f.wav" type="audio/wav"></audio>
       <audio controls><source src="audio/05_piano_G6_cfg7_o.wav" type="audio/wav"></audio>
+    
+      <p class="subheading">Fine-tuned Model</p>
+      <audio controls><source src="audio/01_piano_C6_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_D6_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/03_piano_E5_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/04_piano_F5_cfg7_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/05_piano_G6_cfg7_f.wav" type="audio/wav"></audio>
+    
+      <p>
+        As you listen, note how the original model struggles to maintain precise pitch and timbre, especially for high or low octaves. 
+        The fine-tuned version delivers much clearer and more consistent note generation.
+      </p>
     </div>
+    
     
 
     <div class="sample-block">
