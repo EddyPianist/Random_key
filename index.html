@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generative Audio Comparison</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #1e5799, #2ecc71);
+      color: white;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      color: #333;
+      padding: 2rem;
+    }
+    h1 {
+      margin-top: 3rem;
+    }
+    audio {
+      margin: 0.5rem 0;
+    }
+    .sample-block {
+      margin-bottom: 2.5rem;
+    }
+    .subheading {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CRASH: Raw Audio Score-based Generative Modeling</h1>
+  <h2>Fine-tuned vs Original Model Comparison</h2>
+  <p><i>By Eddy</i></p>
+
+  <div class="container">
+    <p>
+      Each audio sample below is generated using both the <strong>fine-tuned</strong> version of the model and the <strong>original</strong> one. 
+      This comparison helps highlight how conditioning and fine-tuning improve control and sound quality.
+    </p>
+
+    <!-- Audio sample template -->
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> piano, C4 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/01_piano_C4_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/01_piano_C4_cfg7_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> piano, C4 | CFG = 0.5 (3 variations)</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r1_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r2_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r3_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r1_o.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r2_o.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/02_piano_C4_cfg0.5_r3_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> piano, low reverb, C4 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/03_piano_C4_low_reverb_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/03_piano_C4_low_reverb_cfg7_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> violin, D5 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/04_violin_D5_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/04_violin_D5_cfg7_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> violin, D5 | CFG = 0.3 (3 variations)</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/05_violin_D5_cfg0.3_r1_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/05_violin_D5_cfg0.3_r2_f.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/05_violin_D5_cfg0.3_r3_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/05_violin_D5_cfg0.3_r1_o.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/05_violin_D5_cfg0.3_r2_o.wav" type="audio/wav"></audio>
+      <audio controls><source src="audio/05_violin_D5_cfg0.3_r3_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> violin with vibrato, D5 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/04_violin_with_vibrato_D5_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/06_violin_with_vibrato_D5_cfg7_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> bird call, G5 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/07_bird_call_G5_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/07_bird_call_G5_cfg7_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> engine, G2 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/08_engine_G2_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/08_engine_G2_cfg7_o.wav" type="audio/wav"></audio>
+    </div>
+
+    <div class="sample-block">
+      <p><strong>Prompt:</strong> random, F3 | CFG = 7</p>
+      <p class="subheading">Fine-tuned</p>
+      <audio controls><source src="audio/09_random_F3_cfg7_f.wav" type="audio/wav"></audio>
+      <p class="subheading">Original</p>
+      <audio controls><source src="audio/09_random_F3_cfg7_o.wav" type="audio/wav"></audio>
+    </div>
+  </div>
+
+</body>
+</html>
